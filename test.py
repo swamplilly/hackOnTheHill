@@ -36,6 +36,12 @@ screen_size = (640,480)
 flags = 0
 frame_time = 50
 
+################################################################################
+#
+#  START SCREEN
+#
+################################################################################
+
 class Start(Screen):
   def __init__(self,shell):
     Screen.__init__(self,shell)
@@ -64,6 +70,11 @@ class Start(Screen):
   def quit(self):
     sys.exit(0)
 
+################################################################################
+#
+#  SHELL
+#
+################################################################################
 
 class TestShell(Shell):
   def __init__(self,display):
@@ -81,10 +92,11 @@ class TestShell(Shell):
   def show_menu(self):
     self.show_screen(self.menu_screen)
 
-
-
-
-
+################################################################################
+#
+#  MAIN
+#
+################################################################################
 
 def main():
   display = pygame.display.set_mode(screen_size,flags)
@@ -93,51 +105,3 @@ def main():
 
 main()
 
-# class MenuScreen(Screen):
-#   def __init__(self,shell):
-#     Screen.__init__(self,shell)
-#       title = Label("Welcome")
-#       def screen_button(text,screen):
-#         return Button(text,action = lambda: shell.show_screen(screen))
-#       menu = Column([
-#         screen_button("Start",shell.start)
-#       ], align = 'l')
-#       contents = Column([
-#         title,
-#         menu
-#       ], align = 'l',spacing = 20)
-#       self.add_centered(contents)
-
-#   def show_start_screen(self):
-#     self.shell.show_screen(self.start)
-
-#   def quit(self):
-#     sys.exit(0)
-
-# class Start(Screen):
-
-#   def __init__(self,shell):
-#     Screen.__init__(self,shell)
-#     lbl = Label("hi")
-#     lbl.rect.width = 400
-#     lbl.rect.topleft = (200,350)
-#     self.lbl = lbl
-#     self.add(lbl)
-
-# class TestShell(Shell):
-
-#   def __init__(self,display):
-#     Shell.__init__(self,display)
-#     self.create_screens()
-#     self.menu_screen = MenuScreen(self)
-#     self.show_menu()
-
-#     def create_screens(self):
-#       self.start = 
-
-# def main():
-#   display = pygame.display.set_mode(screen_size,flags)
-#   shell = TestShell(display)
-#   shell.run()
-
-# main()
