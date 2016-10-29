@@ -69,14 +69,14 @@ window.onload = function()
 	function toggleKitty()
 	{
 		var kitties = 'abdef'.split('');
-		var pickone = "url(" + kitties[Math.floor(Math.random() * kitties.length)] + ".png)";
+		var pickone = "url(resources/images/" + kitties[Math.floor(Math.random() * kitties.length)] + ".png)";
 		document.getElementById("sideB").style.background=pickone;
 	}
 
 	function togglePuppy()
 	{
 		var puppies = '12456'.split('');
-		var pickone = "url(" + puppies[Math.floor(Math.random() * puppies.length)] + ".png)";
+		var pickone = "url(resources/images/" + puppies[Math.floor(Math.random() * puppies.length)] + ".png)";
 		document.getElementById("sideA").style.background=pickone;
 	}
 
