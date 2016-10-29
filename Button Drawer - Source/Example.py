@@ -6,7 +6,6 @@
 #Import pygame modules and Buttons.py(it must be in same dir)
 import pygame, Buttons
 from pygame.locals import *
-from pygame.color import Color
 
 #Initialize pygame
 pygame.init()
@@ -22,11 +21,9 @@ class Button_Example:
 
     #Update the display and show the button
     def update_display(self):
-        background_color = Color("pink")
-        text_color = (255,255,255)
-        self.screen.fill(background_color)
+        self.screen.fill((30,144,255))
         #Parameters:               surface,      color,       x,   y,   length, height, width,    text,      text_color
-        self.Button1.create_button(self.screen, (107,142,35), 225, 135, 200,    100,    0,        "Example", text_color)
+        self.Button1.create_button(self.screen, (107,142,35), 225, 135, 200,    100,    0,        "Example", (255,255,255))
         pygame.display.flip()
 
 
