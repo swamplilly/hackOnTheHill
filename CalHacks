@@ -1,0 +1,32 @@
+DinDate: 
+Date ideas app.
+
+Uber to estimate prices.
+Yelp to get locations.
+-Guess the cost of fun activity, rules or text scraping.
+
+Web app
+-html/css
+-github to host? 
+-heroku maybe?
+
+Submit - A zipcode
+
+Return - location/idea and cost.
+
+"How about a trip to _category name_ ? For _dollahs_?"
+
+From 2012: 
+
+Price range is the APPROXIMATE
+cost per person for a meal incl. one
+drink, tax and tip.
+
+$= under $10
+$$= $11-$30
+$$$= $31-$60
+$$$$= above $61
+
+So..scale slightly to adjust for inflation, then take geometric mean of each.
+
+Uber tests in uber test file, yelp tests in yelp test file.

@@ -1,0 +1,102 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+#bg
+{
+	opacity:0.5;
+    background-image: url("bg.png");
+    //background-repeat: repeat-x;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+}
+
+#text
+{
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+	position:absolute;
+	left:45%;
+	top:30%;
+	margin:-100px 0 0 -150px;
+	font-size: 35px;
+	font-family: sans-serif;
+}
+
+#ti
+{
+	height: 55px;
+	width: 300px;
+	background-color: white;
+	opacity: .4;
+}
+
+#submitwrap
+{
+	
+	line-height: 100px;
+	margin: 0 auto;
+	margin-top: -10px;
+}
+
+
+.inputzip
+{
+	width: 250px;
+	height: 40px;
+	font-size: 35px;
+	top: 45%;
+}
+
+input
+{
+	text-align: center;
+}
+
+#geotest
+{
+	height: 350px;
+	width: 400px;
+	line-height: 80px;
+	background-color: white;
+	opacity: .8;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#btn
+{
+	dislplay: none;
+}
+
+#sideA
+{
+	margin-top: 45vh;
+	margin-right: 4vw;
+	float: right;
+	height: 300px;
+	width: 300px;
+	//background-image: url("1.png");
+}
+
+#sideB
+{
+	margin-top: 45vh;
+	margin-left: 4vw;
+	position: fixed;
+	height: 300px;
+	width: 300px;
+	//background-image: url("a.png");
+}
+
+
+
+
+
