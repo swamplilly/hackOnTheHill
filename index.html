@@ -16,7 +16,7 @@
       background-position: center;
       margin:auto;
       padding:10px;
-
+      visibility:hidden;
 }
 
 .container { 
@@ -50,8 +50,8 @@ p {
 <div class = "container"> 
 <div id = "name"> 
   <h1> hi wats ur name </h1>
-<form method="POST" onsubmit="submitForm()">
-    <input name="name" type="text" placeholder="name pls" required>
+<form onsubmit="submitForm()">
+    <input id="get_name" name="name" type="text" placeholder="name pls" required>
 </div>
 
 
@@ -413,15 +413,45 @@ p {
 
 
 
-<div class = "containerAnswer"> 
+<div id="containerAnswer" class = "containerAnswer"> 
 
 <h2> 
-Hello (insert name)! (Age) years ago, your parents were probably fornicating around </h2>
+Hello <span id="insert_name"></span>! <span id="get-year"></span> years ago, your parents were probably fornicating around </h2>
 <p><b>(insert holiday)! &hearts;</b></p>
 
 
 
 </div>
->>>>>>> 688bbf83ff7edbb29ec4e8192a52cbd1b6584600
+
+
+<script>
+var get_year = document.getElementById('get-year');
+
+var answer = document.getElementById('containerAnswer');
+var insert_name = document.getElementById('insert_name');
+
+
+var curr_date = new Date();
+var curr_year = curr_date.getFullYear();
+
+
+
+
+function doThis() {
+      var name = document.getElementById('get_name');
+
+      var dob_year = document.getElementById('dob-year');
+      var dob_month = document.getElementById('dob-month');
+      var dob_day = document.getElementById('dob-day');
+
+      var old_year = dob_year.options[dob_year.selectedIndex].value;
+
+      get_year.innerHTML = curr_year - old_year;
+      answer.style.visibility = "visible";
+      insert_name.innerHTML = name.value;
+}
+
+</script>
+
 
 
