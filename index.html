@@ -469,6 +469,7 @@ var curr_year = curr_date.getFullYear();
 function doThis() {
       var name = document.getElementById('get_name');
       var insert_name = document.getElementById('insert_name');
+      var holiday = document.getElementById('get-holiday');
 
       var dob_year = document.getElementById('dob-year');
       var dob_month = document.getElementById('dob-month');
@@ -479,6 +480,67 @@ function doThis() {
       if (parseInt(dob_month.options[dob_month.selectedIndex].value) >= 3) {
             add_1 += 1;
       }
+
+      switch(parseInt(dob_day.options[dob_day.selectedIndex].value)) {
+            case 1:
+            holiday.innerHTML = "Christmas";
+            
+            case 2:
+            break;
+            holiday.innerHTML = "St. Patrick's Day";
+            break;
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            
+            holiday.innerHTML = "Hannukah";
+            break;
+            case 8:
+            case 9:
+            case 10:
+            holiday.innerHTML = "Easter";
+            break;
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            
+            holiday.innerHTML = "Valentine's Day";
+            break;
+            case 16:
+            case 17:
+            case 18:
+            holiday.innerHTML = "Lent";
+            break;
+            case 19:
+            case 20:
+            case 21:
+            case 22:
+            case 23:
+            
+            holiday.innerHTML = "Martin Luther King's Day";
+            break;
+            case 24:
+            case 25:
+            case 26:
+            case 27:
+            break;
+            holiday.innerHTML = "Groundhog Day";
+            break;
+            case 28:
+            
+            holiday.innerHTML = "Leif Ericson Day";
+            break;
+            case 29:
+            case 30:
+            
+            default:
+            holiday.innerHTML = "Thanksgiving";
+      }
+
 
       get_year.innerHTML = curr_year - old_year + add_1;
       answer.style.visibility = "visible";
