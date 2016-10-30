@@ -70,23 +70,23 @@ p {
 
       <option value="">---</option>
 
-      <option value="01">01</option>
+      <option value="1">01</option>
 
-      <option value="02">02</option>
+      <option value="2">02</option>
 
-      <option value="03">03</option>
+      <option value="3">03</option>
 
-      <option value="04">04</option>
+      <option value="4">04</option>
 
-      <option value="05">05</option>
+      <option value="5">05</option>
 
-      <option value="06">06</option>
+      <option value="6">06</option>
 
-      <option value="07">07</option>
+      <option value="7">07</option>
 
-      <option value="08">08</option>
+      <option value="8">08</option>
 
-      <option value="09">09</option>
+      <option value="9">09</option>
 
       <option value="10">10</option>
 
@@ -140,23 +140,23 @@ p {
 
       <option value="">-----</option>
 
-      <option value="01">January</option>
+      <option value="1">January</option>
 
-      <option value="02">February</option>
+      <option value="2">February</option>
 
-      <option value="03">March</option>
+      <option value="3">March</option>
 
-      <option value="04">April</option>
+      <option value="4">April</option>
 
-      <option value="05">May</option>
+      <option value="5">May</option>
 
-      <option value="06">June</option>
+      <option value="6">June</option>
 
-      <option value="07">July</option>
+      <option value="7">July</option>
 
-      <option value="08">August</option>
+      <option value="8">August</option>
 
-      <option value="09">September</option>
+      <option value="9">September</option>
 
       <option value="10">October</option>
 
@@ -417,7 +417,7 @@ p {
 
 <h2> 
 Hello <span id="insert_name"></span>! <span id="get-year"></span> years ago, your parents were probably fornicating around </h2>
-<p><b>(insert holiday)! &hearts;</b></p>
+<p><b><span id="get-holiday">(insert holiday)</span>! &hearts;</b></p>
 
 
 
@@ -428,8 +428,6 @@ Hello <span id="insert_name"></span>! <span id="get-year"></span> years ago, you
 var get_year = document.getElementById('get-year');
 
 var answer = document.getElementById('containerAnswer');
-var insert_name = document.getElementById('insert_name');
-
 
 var curr_date = new Date();
 var curr_year = curr_date.getFullYear();
@@ -439,16 +437,22 @@ var curr_year = curr_date.getFullYear();
 
 function doThis() {
       var name = document.getElementById('get_name');
+      var insert_name = document.getElementById('insert_name');
 
       var dob_year = document.getElementById('dob-year');
       var dob_month = document.getElementById('dob-month');
       var dob_day = document.getElementById('dob-day');
+      var add_1 = 0;
 
       var old_year = dob_year.options[dob_year.selectedIndex].value;
+      if (parseInt(dob_month.options[dob_month.selectedIndex].value) >= 3) {
+            add_1 += 1;
+      }
 
-      get_year.innerHTML = curr_year - old_year;
+      get_year.innerHTML = curr_year - old_year + add_1;
       answer.style.visibility = "visible";
       insert_name.innerHTML = name.value;
+
 }
 
 </script>
