@@ -79,7 +79,7 @@ p {
 <div class = "container"> 
 <div id = "name"> 
   <h1> hi wats ur name </h1>
-<form action="/submit-name-and-date">
+<form>
     <input type="text" placeholder ="name pls" required>
 </div>
 
@@ -435,7 +435,7 @@ p {
 </div>
 
 
-<div class = "submitbutton"> <button type="submit" class ="btn btn-primary btn-xs" value="submit-name-and-date">Submit</button> </div>
+<div class = "submitbutton"> <button onclick="doThis()" type="submit" class ="btn btn-primary btn-xs" value="submit-name-and-date">Submit</button> </div>
 
 
 
@@ -450,8 +450,8 @@ p {
 <div class = "containerAnswer"> 
 
 <h2> 
-Greetings (insert name)! (Age) years ago, your parents were probably fornicating around </h2>
-<p><b>(insert holiday)! &hearts;</b></p>
+Hello <span id="insert_name"></span>! <span id="get-year"></span> years ago, your parents were probably fornicating around </h2>
+<p><b><span id="get-holiday">(insert holiday)</span>! &hearts;</b></p>
 
 </div>
 
@@ -462,3 +462,37 @@ Greetings (insert name)! (Age) years ago, your parents were probably fornicating
   </footer>  
 
 </div>
+
+
+<script>
+var get_year = document.getElementById('get-year');
+
+var answer = document.getElementById('containerAnswer');
+
+var curr_date = new Date();
+var curr_year = curr_date.getFullYear();
+
+
+
+
+function doThis() {
+      var name = document.getElementById('get_name');
+      var insert_name = document.getElementById('insert_name');
+
+      var dob_year = document.getElementById('dob-year');
+      var dob_month = document.getElementById('dob-month');
+      var dob_day = document.getElementById('dob-day');
+      var add_1 = 0;
+
+      var old_year = dob_year.options[dob_year.selectedIndex].value;
+      if (parseInt(dob_month.options[dob_month.selectedIndex].value) >= 3) {
+            add_1 += 1;
+      }
+
+      get_year.innerHTML = curr_year - old_year + add_1;
+      answer.style.visibility = "visible";
+      insert_name.innerHTML = name.value;
+
+}
+
+</script>

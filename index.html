@@ -5,35 +5,59 @@
   font-family: Monospace;
 }
 #name {
-  text-align: center;
+  text-align: center;   
   font-family: Monospace;
 }
 
+#footer {
+      font-family: Monospace;
+      color:grey;
+      font-size: 10px;
+      position: absolute;
+      right: 1;
+      bottom: 0;
+      left: 0;
+      background-color: #efefef;
+    
+
+}
 .containerAnswer {
       text-align: center;
       font-family: Monospace;
       width: 700px;
       background-position: center;
-      margin:auto;
-      padding:10px;
-      visibility:hidden;
+      margin: auto;
+      visibility: hidden;
+ 
+
 }
 
 .container { 
       
       background-color: pink; 
-      width: 700px;
+      width: 500px;
       margin: auto;
-      padding: 10px;
+      padding: 5px;
       background-position: center;
       border-radius: 30px;
 
+}
+.submitbutton {
+   margin: auto;
+
+}
+
+.whitespace{
+      padding:10px;
 }
 
 p { 
       font-size: 100px;
       font-family: Lobster;
       color: pink;
+      margin: auto;
+
+
 }
   
 </style>
@@ -417,12 +441,19 @@ p {
 
 <h2> 
 Hello <span id="insert_name"></span>! <span id="get-year"></span> years ago, your parents were probably fornicating around </h2>
-<p><b><span id="get-holiday">(insert holiday)</span>! &hearts;</b></p>
+<p><b><span id="get-holiday">Christmas</span>! &hearts;</b></p>
 
 
 
 </div>
 
+
+<div id = "footer">
+<footer>
+        made for Hack on the Hill 2016 &hearts;
+  </footer>  
+
+</div>
 
 <script>
 var get_year = document.getElementById('get-year');
