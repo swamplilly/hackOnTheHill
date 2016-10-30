@@ -18,20 +18,11 @@ window.onload = function()
 	{
 		lat = position.coords.latitude;
 		lon = position.coords.longitude;
-		//x.innerHTML = "Latitude: " + lat + "<br>Longitude: " + lon;
 		var httpRequest = new XMLHttpRequest();
-		// httpRequest.onreadystatechange = function()
-		// {
-		// 	if (httpRequest.readyState === 4)
-		// 	{
-		// 		alert("done");
-		// 	}
-		// };
 		httpRequest.open('POST', "http://localhost/api", true);
 		httpRequest.setRequestHeader('Content-Type', 'application/json');
 		var coords = {lat: position.coords.latitude, lon: position.coords.longitude}
 		httpRequest.send(JSON.stringify(coords));
-		// alert(JSON.stringify(coords));
 	}
 
 	function error()
@@ -124,7 +115,6 @@ window.onload = function()
 			getLocation();
 			randomizeBGColor();
 			randomizeFontColor();
-			//waitForIt();
 			toggleKitty();
 			togglePuppy();
 			niceThings();
