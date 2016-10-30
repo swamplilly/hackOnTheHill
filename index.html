@@ -6,7 +6,34 @@
 }
 #name {
   text-align: center;
-   font-family: Monospace;
+  font-family: Monospace;
+}
+
+.containerAnswer {
+      text-align: center;
+      font-family: Monospace;
+      width: 700px;
+      background-position: center;
+      margin:auto;
+      padding:10px;
+
+}
+
+.container { 
+      
+      background-color: pink; 
+      width: 700px;
+      margin: auto;
+      padding: 10px;
+      background-position: center;
+      border-radius: 30px;
+
+}
+
+p { 
+      font-size: 100px;
+      font-family: Lobster;
+      color: pink;
 }
   
 </style>
@@ -19,6 +46,8 @@
 <script src="lilly.js"></script>
 </head>
 
+
+<div class = "container"> 
 <div id = "name"> 
   <h1> hi wats ur name </h1>
 <form method="POST" onsubmit="submitForm()">
@@ -27,7 +56,7 @@
 
 
 <div id = "bday"> 
-<h1> when's ur bday? </h2>
+<h1> when's ur bday? </h1>
 
 <div class="control-group">
 
@@ -377,20 +406,22 @@
     <button type="button" onclick="doThis()">Submit</button>
   </form>
 
-<div style="height:50px;width:300px;background-color:pink;">
-      <p id="write_here"></p>
 </div>
 
 </div>
 
-<script>
-var write_here = document.getElementById('write_here');
-var dob_day = document.getElementById('dob-day');
 
-function doThis() {
-      write_here.innerHTML = dob_day.options[dob_day.selectedIndex].value;
-}      
 
-</script>
+
+<div class = "containerAnswer"> 
+
+<h2> 
+Hello (insert name)! (Age) years ago, your parents were probably fornicating around </h2>
+<p><b>(insert holiday)! &hearts;</b></p>
+
+
+
+</div>
+>>>>>>> 688bbf83ff7edbb29ec4e8192a52cbd1b6584600
 
 
